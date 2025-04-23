@@ -1,12 +1,12 @@
 package com.example.lab2
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import androidx.activity.viewModels
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -38,6 +38,13 @@ class MainActivity : AppCompatActivity() {
             Log.d("MainActivity", "Phones observed: ${phones.size}")
             // przekazanie danych do adaptera
             phoneAdapter.setPhones(phones)
+        }
+
+
+        val fab: View = findViewById(R.id.fab)
+        fab.setOnClickListener { view ->
+            val intent = Intent(this, FormActivity::class.java)
+            startActivity(intent)
         }
     }
 

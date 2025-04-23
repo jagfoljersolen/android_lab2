@@ -6,9 +6,9 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Phone(
-    @PrimaryKey val id: Int,
-    @ColumnInfo val producer: String,
-    @ColumnInfo val model: String,
-    @ColumnInfo val androidVersion: String,
-    @ColumnInfo val webpage: String
+    @PrimaryKey(autoGenerate = true) val id: Int,
+    @ColumnInfo var producer: String,
+    @ColumnInfo var model: String,
+    @ColumnInfo var androidVersion: String,
+    @ColumnInfo var webpage: String
 )

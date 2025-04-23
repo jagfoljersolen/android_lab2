@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">lab2</string>
     <string name="delete_option">Clear all data</string>
+
+    <string name="manufacturer">Manufacturer</string>
+    <string name="model">Model</string>
+    <string name="version">Android Version</string>
+    <string name="www">Web site</string>
+
+    <string name="www_button">WEB SITE</string>
+    <string name="cancel_button">CANCEL</string>
+    <string name="save_button">SAVE</string>
 </resources>
