@@ -35,15 +35,10 @@ class PhoneRepository(application: Application){
         }
     }
 
-    fun loadAllByIds(phoneIds: IntArray) {
-        PhoneDatabase.databaseWriteExecutor.execute {
-            phoneDao.loadAllByIds(phoneIds)
-        }
-    }
 
-    fun findByName(producer: String, model: String) {
+    fun update(phone: Phone) {
         PhoneDatabase.databaseWriteExecutor.execute {
-            phoneDao.findByName(producer, model)
+            phoneDao.update(phone)
         }
     }
 }

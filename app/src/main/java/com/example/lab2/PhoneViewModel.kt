@@ -27,11 +27,7 @@ class PhoneViewModel(application: Application) : AndroidViewModel(application){
         repository.insert(phone)
     }
 
-    fun getAllByIds(phoneIds: IntArray) {
-        repository.loadAllByIds(phoneIds)
-    }
-
-    fun findByName(producer: String, model: String) {
-        repository.findByName(producer, model)
+    fun update(phone: Phone) {
+        repository.update(phone)
     }
 }

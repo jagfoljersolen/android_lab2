@@ -6,18 +6,12 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 
 @Dao
 interface PhoneDao {
     @Query("SELECT * FROM phone")
     fun getAll(): LiveData<List<Phone>>
-
-    @Query("SELECT * FROM phone WHERE id IN (:phoneIds)")
-    fun loadAllByIds(phoneIds: IntArray): LiveData<List<Phone>>
-
-    @Query("SELECT * FROM phone WHERE producer LIKE :producer AND " +
-            "model LIKE :model")
-    fun findByName(producer: String, model: String) : LiveData<List<Phone>>
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
     fun insert(vararg phones: Phone)
@@ -27,4 +21,7 @@ interface PhoneDao {
 
     @Query("DELETE FROM phone")
     fun deleteAll()
+
+    @Update
+    fun update(phone: Phone)
 }

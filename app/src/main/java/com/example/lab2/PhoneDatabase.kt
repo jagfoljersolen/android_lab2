@@ -35,14 +35,14 @@ abstract class PhoneDatabase : RoomDatabase() {
             override fun onCreate(db: SupportSQLiteDatabase) {
                 super.onCreate(db)
                 databaseWriteExecutor.execute {
-                    INSTANCE?.phoneDao()?.insert(Phone(0, "Samsung", "Galaxy A20","14", "www.samsung.com"),
-                        Phone(0, "Samsung", "Galaxy S24", "13", "www.samsung.com"),
-                        Phone(0, "Google", "Pixel 6", "14", "www.google.com"),
-                        Phone(0, "Sony", "Xperia 5 II", "12", "www.sony.com"),
-                        Phone(0, "Nokia", "8.3 5G", "12", "www.nokia.com"),
-                        Phone(0, "Huawei", "P50 Pro", "11", "www.huawei.com"),
-                        Phone(0, "Xiaomi", "Mi 11 Ultra", "12", "www.mi.com"),
-                        Phone(0, "Motorola", "Edge 20 Pro", "13", "www.motorola.com"))
+                    INSTANCE?.phoneDao()?.insert(Phone(0, "Samsung", "Galaxy A20","14", "https://www.samsung.com"),
+                        Phone(0, "Samsung", "Galaxy S24", "13", "https://www.samsung.com"),
+                        Phone(0, "Google", "Pixel 6", "14", "https://www.google.com"),
+                        Phone(0, "Sony", "Xperia 5 II", "12", "https://www.sony.com"),
+                        Phone(0, "Nokia", "8.3 5G", "12", "https://www.nokia.com"),
+                        Phone(0, "Huawei", "P50 Pro", "11", "https://www.huawei.com"),
+                        Phone(0, "Xiaomi", "Mi 11 Ultra", "12", "https://www.mi.com"),
+                        Phone(0, "Motorola", "Edge 20 Pro", "13", "https://www.motorola.com"))
 
                 }
             }
